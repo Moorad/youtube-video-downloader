@@ -26,8 +26,18 @@
 }
 
 .convert-button {
-	border-radius:0px 4px 4px 0px;
 	border:2px solid #0485ff;
 	background: #0485ff;
 	color:white;
+	transition: 0.15s;
 }
+
+.convert-button:hover {
+	background: #016acc;
+	border-color: #016acc;
+}
+
+#mp3 {
+	border-radius:0px 4px 4px 0px;
+}
+
