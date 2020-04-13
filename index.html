@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
     <title>Youtube Downloader</title>
-</head>
+  </head>
 
-<body>
-    <h1 class="heading">My Own Youtube Downloader !</h1>
-    <input class="URL-input" placeholder="https://www.youtube.com/watch?v=MtN1YnoL46Q"><button class="convert-button" id="mp4">Convert mp4</button><button class="convert-button" id='mp3'>Convert mp3</button>
-    <script src='script.js'></script>
-</body>
+  <body>
+    <h1 class="heading">Paste YouTube URL</h1>
+    <input
+      class="URL-input"
+      placeholder="https://www.youtube.com/watch?v=MtN1YnoL46Q"
+    />
+    <select class="opt">
+      <option value="mp3">mp3</option>
+      <option value="mp4">mp4</option>
+    </select>
 
+    <button class="convert-button" id="btn">Convert</button>
+    <script src="./script.js"></script>
+  </body>
 </html>
