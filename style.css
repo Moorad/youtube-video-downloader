@@ -45,11 +45,6 @@ body {
   border-color: #016acc;
 }
 
-#mp3 {
-  margin: 2% auto;
-  border-radius: 0px 4px 4px 0px;
-}
-
 @media only screen and (max-width: 600px) {
   body {
     display: grid;
@@ -66,14 +61,9 @@ body {
   }
 }
 
-body {
-  color: snow;
-  background: #000;
-}
-
 .opt {
   width: 30vw;
-  margin: 5% auto;
+  margin: 2% auto;
   padding: 4px;
   border-radius: 7%;
 }
