@@ -1,69 +1,71 @@
 * {
-  text-align: center;
+	text-align: center;
 }
 
 body {
-  display: grid;
-  grid-template-columns: auto;
+	display: grid;
+	grid-template-columns: auto;
 }
 
 .heading {
-  font-family: Arial;
-  margin-top: 40vh;
+	font-family: Arial;
+	margin-top: 40vh;
 }
 
 .URL-input,
 .convert-button {
-  font-size: 1.3em;
-  padding: 5px 10px;
+	font-size: 1.3em;
+	padding: 5px 10px;
 }
 
 .URL-input {
-  margin: auto;
-  border-radius: 4px 0px 0px 4px;
-  width: 30em;
-  text-align: left;
-  border: 2px solid #eeeeee;
-  background: #eeeeee;
-  outline: none;
+	margin: auto;
+	border-radius: 4px 0px 0px 4px;
+	width: 30em;
+	text-align: left;
+	border: 2px solid #eeeeee;
+	background: #eeeeee;
+	outline: none;
 }
 
 .URL-input:focus {
-  border: 2px solid #0485ff;
+	border: 2px solid #0485ff;
 }
 
 .convert-button {
-  margin: 2% auto;
-  border: 2px solid #0485ff;
-  background: #0485ff;
-  color: white;
-  transition: 0.15s;
+	margin: 2% auto;
+	border: 2px solid #0485ff;
+	background: #0485ff;
+	color: white;
+	transition: 0.15s;
 }
 
 .convert-button:hover {
-  background: #016acc;
-  border-color: #016acc;
+	background: #016acc;
+	border-color: #016acc;
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-  }
-  .URL-input {
-    margin: auto;
-    width: 100%;
-  }
-  .convert-button {
-    margin: 7% auto;
-    width: 100%;
-  }
+	body {
+		display: grid;
+		grid-template-columns: auto;
+		justify-content: center;
+	}
+
+	.URL-input {
+		margin: auto;
+		width: 100%;
+	}
+
+	.convert-button {
+		margin: 7% auto;
+		width: 100%;
+	}
 }
 
 .opt {
-  width: 30vw;
-  margin: 2% auto;
-  padding: 4px;
-  border-radius: 7%;
+	width: 30vw;
+	margin: 2% auto;
+	padding: 4px;
+	border-radius: 7%;
 }
