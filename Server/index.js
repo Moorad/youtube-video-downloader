@@ -18,6 +18,7 @@ app.get('/downloadmp3', async (req, res, next) => {
 		await ytdl.getBasicInfo(url, {
 			format: 'mp4'
 		}, (err, info) => {
+			if (err) throw err;
 			title = info.player_response.videoDetails.title.replace(/[^\x00-\x7F]/g, "");
 		});
 
