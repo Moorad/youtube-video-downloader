@@ -8,17 +8,33 @@ Btn.addEventListener('click', () => {
 		alert('Enter YouTube URL');
 	} else {
 		if (select.value == 'mp3') {
-			redirectMp3(URLinput.value);
+			downloadMp3(URLinput.value);
 		} else if (select.value == 'mp4') {
-			redirectMp4(URLinput.value);
+			downloadMp4(URLinput.value);
 		}
 	}
 });
 
-function redirectMp3(query) {
-	window.location.href = `${serverURL}/downloadmp3?url=${query}`;
+async function downloadMp3(query) {
+	const res = await fetch(`${serverURL}/downloadmp3?url=${query}`);
+	if(res.status == 200) {
+		var a = document.createElement('a');
+  		a.href = `${serverURL}/downloadmp3?url=${query}`;
+  		a.setAttribute('download', '');
+		a.click();
+	} else if(res.status == 400) {
+		alert("Invalid url");
+	}
 }
 
-function redirectMp4(query) {
-	window.location.href = `${serverURL}/downloadmp4?url=${query}`;
+async function downloadMp4(query) {
+	const res = await fetch(`${serverURL}/downloadmp4?url=${query}`);
+	if(res.status == 200) {
+		var a = document.createElement('a');
+  		a.href = `${serverURL}/downloadmp4?url=${query}`;
+  		a.setAttribute('download', '');
+		a.click();
+	} else if(res.status == 400) {
+		alert('Invalid url');
+	}
 }
