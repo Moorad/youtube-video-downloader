@@ -18,12 +18,14 @@ app.get('/downloadmp3', async (req, res, next) => {
 		}
 		let title = 'audio';
 
-		await ytdl.getBasicInfo(url, {
-			format: 'mp4'
-		}, (err, info) => {
-			if (err) throw err;
+		try {
+			const info = await ytdl.getBasicInfo(url, {
+				format: 'mp4'
+			})
 			title = info.player_response.videoDetails.title.replace(/[^\x00-\x7F]/g, "");
-		});
+		} catch (err) {
+			console.error(err)
+		}
 
 		res.header('Content-Disposition', `attachment; filename="${title}.mp3"`);
 		ytdl(url, {
@@ -44,11 +46,14 @@ app.get('/downloadmp4', async (req, res, next) => {
 		}
 		let title = 'video';
 
-		await ytdl.getBasicInfo(url, {
-			format: 'mp4'
-		}, (err, info) => {
+		try {
+			const info = await ytdl.getBasicInfo(url, {
+				format: 'mp4'
+			});
 			title = info.player_response.videoDetails.title.replace(/[^\x00-\x7F]/g, "");
-		});
+		} catch (err) {
+			console.error(err);
+		}
 
 		res.header('Content-Disposition', `attachment; filename="${title}.mp4"`);
 		ytdl(url, {

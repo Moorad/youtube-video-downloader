@@ -12,7 +12,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "ytdl-core": "^3.1.2"
+    "ytdl-core": "git+ssh://git@github.com:khlevon/node-ytdl-core.git#v4.11.4-patch.2"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
